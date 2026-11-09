@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/libxmp/libxmp-fuzz
+project: savantenvs/libxmp
+target: libxmp_fuzz-mined-0fc9a90
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/libxmp_fuzz-mined-0fc9a90/testsuite
+cmds:
+  - cmd: /mayhem/libxmp_fuzz
+    libfuzzer: true
+    timeout: 10
